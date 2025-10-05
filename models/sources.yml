@@ -10,3 +10,10 @@ sources:
         description: One record per customer
       - name: orders
         description: One record per order. Includes cancelled and deleted orders also.
+  - name: stripe
+    description: This is where the payment data comes from
+    database: raw
+    schema: stripe
+    tables:
+      - name: PAYMENT
+        description: One record per payment, One order could contain different payments
